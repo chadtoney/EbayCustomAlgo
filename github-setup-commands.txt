@@ -1,0 +1,14 @@
+# GitHub Setup Commands
+# After creating your GitHub repository, run these commands:
+
+# Replace YOUR_USERNAME with your actual GitHub username
+# Replace YOUR_REPO_NAME with your actual repository name (e.g., ebaycustomalgo)
+
+git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+git branch -M main
+git push -u origin main
+
+# Example (replace with your actual details):
+# git remote add origin https://github.com/yourusername/ebaycustomalgo.git
+# git branch -M main  
+# git push -u origin main
