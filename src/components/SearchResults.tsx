@@ -15,7 +15,7 @@ interface SearchResultsProps {
     condition: string;
     seller: { username: string; feedbackPercentage: number; feedbackScore: number };
     shippingOptions?: Array<{ shippingCost: { value: string; currency: string }; type: string }>;
-    location: { country: string };
+    location?: { country: string };
     shortDescription?: string;
     relevanceScore: number;
     rankingFactors?: {
@@ -159,9 +159,11 @@ export default function SearchResults({ items, isLoading, error, total }: Search
                       </p>
                     </div>
                     <div>
-                      <p className="text-sm text-gray-600">
-                        <span className="font-medium">Location:</span> {item.location.country}
-                      </p>
+                      {item.location?.country && (
+                        <p className="text-sm text-gray-600">
+                          <span className="font-medium">Location:</span> {item.location.country}
+                        </p>
+                      )}
                       {item.shippingOptions && item.shippingOptions.length > 0 && (
                         <p className="text-sm text-gray-600">
                           <span className="font-medium">Shipping:</span> 

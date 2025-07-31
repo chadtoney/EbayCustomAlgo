@@ -28,14 +28,14 @@ export interface EbayItem {
     feedbackPercentage: number;
     feedbackScore: number;
   };
-  shippingOptions: Array<{
+  shippingOptions?: Array<{
     shippingCost: {
       value: string;
       currency: string;
     };
     type: string;
   }>;
-  location: {
+  location?: {
     country: string;
   };
   shortDescription?: string;
